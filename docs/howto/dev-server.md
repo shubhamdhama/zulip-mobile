@@ -61,11 +61,13 @@ So you can just use `10.0.2.2` below.
 ### Any (?) physical or emulated device
 
 This method should work on any physical device, or the Android emulator or
-iOS simulator.  (It's been tested at least on the Android emulator and a
-physical iOS device.)
+iOS simulator.  (It's been tested at least on the Android emulator and
+physical android and iOS devices.)
 
 First, if you're using a physical device, connect it and your computer to
-the same wifi network.  For an emulator/simulator, just run it on the same
+the same wifi network or connecting the computer with the mobile hotspot 
+of this physical device is also fine.
+For an emulator/simulator, just run it on the same
 computer you're running the Zulip server on.
 
 We'll use **the IP address your computer uses on the local network**.  (For
@@ -103,8 +105,8 @@ a forwarder, set up by Vagrant, which passes requests on to the Zulip
 server inside the VM.
 
 To make the forwarder listen on all network interfaces, just add the
-following line to a file `~/.zulip-vagrant-config` (and create the file if
-it doesn't already exist):
+following line to a file `~/.zulip-vagrant-config` of the host computer
+(and create the file if it doesn't already exist):
 ```
 HOST_IP_ADDR 0.0.0.0
 ```
